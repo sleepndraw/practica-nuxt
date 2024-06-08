@@ -1,0 +1,212 @@
+@import 'partials/reset'
+@import 'partials/type'
+@import 'partials/navbar'
+@import 'partials/styles'
+@import 'partials/components'
+@import 'partials/cards'
+@import 'lib/mixins'
+
+
+
+.dropdown-container
+    display: flex
+    // flex-direction: column
+    width: fit-content
+    height: auto
+    border: 1px solid black
+.dropdown
+    position: relative
+    display: block
+    font-weight: $thin
+    @apply py-2 px-4
+    
+  
+.dropdown-trigger
+    cursor: pointer
+    display: flex
+    align-items: center
+   
+    
+
+.arrow-icon
+    margin-left: 0.5rem
+
+.dropdown-menu
+    position: static
+    top: calc(100% + 0.5rem)
+    width: 100%
+    
+
+.slide-fade-enter-active,
+.slide-fade-leave-active
+    transition: opacity 0.3s, transform 0.3s
+    
+
+.slide-fade-enter,
+.slide-fade-leave-to
+    opacity: 0
+    transition: opacity 0.3s, transform 0.3s
+    transform: translateY(-10px)
+
+.dropdown-menu.show
+    display: block
+form
+    @include form
+    .small_inputs
+        display: flex
+        flex-direction: column
+        width: fit-content
+        gap: .5rem
+    
+textarea
+   @include textarea
+input
+    @include input
+
+
+
+button
+    min-width: 10rem
+    width: fit-content
+    white-space: none
+    @include button
+    &[class$="blue"]
+        @include button-blue
+    &[class$="white"]
+        @include button-white
+    &[class$="disabled"]
+        @include button-disabled
+    &.blue.disabled
+        @include button-white-disabled
+    &.white.disabled
+        @include button-white-disabled
+@media (max-width: 640px)
+    button
+        min-width: 10rem
+        @include button-responsive
+        &[class$="blue"]
+            @include button-blue-res
+        &[class$="white"]
+            @include button-white-res
+        &[class$="disabled"]
+            @include button-disabled-res
+        &.blue.disabled
+            @include button-white-disabled
+        &.white.disabled
+            @include button-white-disabled
+.section_header
+        font-weight: $bold
+        font-style: italic
+        @apply pb-8 mb-16
+        border-bottom: 1px solid gray
+
+a 
+    color: #0060B6
+    text-decoration: none
+
+
+a:hover 
+    color:#00A0C6
+    text-decoration: none
+    cursor: pointer
+html 
+    @apply  bg-gray-100
+    scroll-behavior: smooth
+
+.layout
+    
+    font-family: 'Archivo', sans-serif
+    font-size: $font_xs
+
+    @apply text-black_primary bg-gray-100
+
+    
+    body
+        // padding: 32px
+        height: 100vh
+        @apply py-16
+        &[class$="home"]
+            // background-image: url('img/bg-white.svg')
+            // background-repeat: no-repeat
+            // background-size: 80rem
+            
+            background-position: 85% 5%
+            // @apply bg-blue_primary
+        .home
+            .home_hero
+                display: block
+                @apply bg-blue_primary px-28 py-24
+                clip-path: polygon(2% 0, 100% 0, 100% 100%, 0% 100%)
+                width: fit-content
+                align-items: center
+                .hero_contents
+                    display: flex
+                    flex-direction: column
+                    width: 1000vh
+                    @apply px-28
+                    h1
+                        @apply text-gray-100
+                    h2
+                        font-weight: normal
+                        @apply text-gray-100
+@media (max-width: 640px)              
+    body
+        // padding: 32px
+        // height: 100vh
+        // @apply py-16
+        &[class$="home"]
+            // background-image: url('img/bg-white.svg')
+            // background-repeat: no-repeat
+            // background-size: 80rem
+            
+            // @apply bg-blue_primary
+        .home
+            .home_hero
+                display: flex !important
+                clip-path: none !important
+                @apply bg-blue_primary px-2 py-4
+                max-width: fit-content
+                .hero_contents
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    // width: 1000vh
+                    width: fit-content
+                    padding: none !important
+                    h1
+                        @apply text-gray-100
+                        font-size: $font-lg
+                    h2
+                        font-weight: normal
+                        @apply text-gray-100
+                        font-size: $font-sm
+                
+.key_features
+    display: flex
+    justify-content: center
+    text-align: center
+    flex-direction: column
+    padding-top: 2rem
+    gap: 2rem
+    h3
+        @apply py-4 text-blue_primary
+
+        // font-style: italic
+        // font-weight: $bold
+.home_cards
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    gap: 1.5rem
+    
+    flex-wrap: wrap
+    
+
+
+@media (max-width: 640px) 
+    body
+        overflow-x: hidden
+    .home_hero
+        width: 30rem !important
+        padding: none !important

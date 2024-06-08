@@ -1,0 +1,110 @@
+//pubCard
+.pub_card
+    display: flex
+    gap: .5rem
+    @apply bg-ffd_green-300 border-2 border-l-green_primary my-8 
+    width: fit-content
+    box-shadow: -6px 9px 0px 0px #98CE00
+    .card_info
+        @apply py-4 px-8
+        width: auto
+        display: flex
+        justify-content: flex-end
+        flex-direction: column
+        .card_text
+            display: flex
+            flex-direction: column
+            gap: .5rem
+            justify-content: start
+        .link
+            display: flex
+            align-content: align-middle
+            justify-content: flex-end
+            @apply pt-4
+            small
+                @apply px-2
+                font-weight: $medium
+            
+    .date
+        display: flex
+        @apply text-green_primary bg-ffd_green-400 px-16 py-2
+        clip-path: polygon(28% 0, 100% 0, 100% 100%, 0% 100%)
+@media (max-width: 640px)
+    .pub_card
+        display: flex
+        flex-direction: column
+        // max-width: 20rem
+    .date
+        display: flex
+        justify-content: right
+
+//teamCard
+.team_card
+    display: flex
+    width: fit-content
+    gap: .5rem
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+    box-shadow: -6px 9px 0px 0px #C9E2FF
+    border: 1px solid #C9E2FF
+    @apply bg-gray-100 
+    &[class$="flex-h"]
+        flex-direction: row
+        justify-content: left
+        align-items: left
+        
+    .img_card
+        display: flex
+        box-shadow: 0px 2px 8px 0px #1c74d9ee
+        min-width: 12rem
+        min-height: 12rem
+        @apply bg-ffd_blue-200 px-4 py-2
+        clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%)
+    .card_text
+        
+        min-width: 12rem
+        width: fit-content
+        // @apply bg-gray-100
+        text-align: center 
+            
+        &[class$="flex-h"]
+            text-align: top
+        @apply pb-4   
+        p
+            font-weight: $medium
+        small
+            @apply text-blue_primary
+
+.home_card
+    display: flex
+    max-width: 24rem
+    min-width: 18rem
+    max-height: 24rem
+    min-height: 24rem
+    @apply bg-gray-100 py-4 px-8 
+    box-shadow: #1c74d981 0px 2px 8px 0px
+    &:hover
+        max-width: 28rem
+        min-width: 18rem
+        max-height: 28rem
+        min-height: 28rem
+        transition: 200ms ease-in-out
+    .card_info
+        display: flex
+        flex-direction: column
+        gap: 1.5rem
+        .card_text
+            
+            h5
+                @apply text-blue_primary
+        .card_body
+            @apply text-ffd_blue-500
+            text-justify: inter-word
+            
+
+
+        .home_icon
+            font-size: 8rem
+            @apply text-ffd_blue-400 mt-2

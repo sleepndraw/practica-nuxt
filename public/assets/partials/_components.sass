@@ -1,0 +1,70 @@
+.components
+
+    .navigation
+        
+        .buttons_showcase
+            .title
+                display: flex
+                flex-direction: column
+                @apply pb-8
+            .buttons_box
+                display: flex
+                flex-wrap: wrap
+                flex-direction: column
+                gap: 1.5rem
+                .buttons_and_text
+                    display: flex
+                    
+                    gap: 8rem
+                   
+                        
+                    .buttons_text
+                        p
+                            @apply text-gray-400
+                    .btns_white_bg
+                        @apply pb-8
+                        display: flex
+                        flex-direction: row
+                        gap: 1.5rem
+                        width: 80%
+                        .btns_black
+                            gap: .5rem
+                            display: flex
+                            flex-direction: column
+                        .btns_blue
+                            gap: .5rem
+                            display: flex
+                            flex-direction: column
+                .btns_blue_bg
+                    @apply bg-blue_primary py-8 px-8
+                    display: flex
+                    flex-direction: column
+                    width: 80%
+                    gap: .5rem
+.inputs_container
+    display: flex
+          
+                    
+.team_cards
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    gap: 1.5rem
+    justify-content: center
+
+.title
+    display: flex
+    flex-direction: column
+    @apply pb-8
+@media (max-width: 640px)
+    .buttons_and_text
+        display: flex
+        flex-wrap: wrap
+        gap: 2rem
+    .btns_white_bg
+        @apply pb-8
+        display: flex
+        flex-direction: column
+        gap: 1.5rem
+    .inputs_container
+        flex-wrap: wrap

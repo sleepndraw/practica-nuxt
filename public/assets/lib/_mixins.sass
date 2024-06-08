@@ -1,0 +1,151 @@
+@mixin button
+    font-size: $font-sm
+    @apply border-2 border-black_primary text-black_primary py-2 px-4
+
+    &:hover:not(:disabled)
+        @apply border-2 border-gray-100 text-gray-100 bg-black_primary py-2 px-4
+        transition: 200ms ease-in-out
+        font-size: $font-md
+
+    &:disabled
+        @apply border-2 border-gray-400 text-gray-400
+        transition: 200ms ease-in-out
+        font-size: $font-sm
+        cursor: default
+
+@mixin button-white
+    @include button
+    @apply text-gray-100 border-2 border-gray-100 py-2 px-4
+
+    &:hover:not(:disabled)
+        @apply border-blue_primary text-blue_primary bg-gray-100
+        transition: 200ms ease-in-out
+
+    &:disabled
+        @apply border-gray-100 text-gray-100 bg-ffd_blue-400
+        transition: 200ms ease-in-out
+        font-size: $font-sm
+        cursor: default
+
+@mixin button-disabled
+    @apply border-2 border-gray-400 text-gray-400
+
+    &:hover
+        @apply border-gray-400 text-gray-400
+        background-color: transparent
+        font-size: $font-sm
+        cursor: default
+
+@mixin button-white-disabled
+    @apply border-ffd_blue-400 text-ffd_blue-400
+
+    &:hover
+        @apply border-ffd_blue-400 text-ffd_blue-400
+        background-color: transparent
+        font-size: $font-sm
+        cursor: default
+
+@mixin button-blue
+    @include button
+    @apply text-blue_primary border-2 border-blue_primary
+
+    &:hover
+        @apply border-gray-100 text-gray-100 bg-blue_primary
+        transition: 200ms ease-in-out
+
+@mixin button-responsive
+    font-size: $font-xs
+    @apply border-2 border-black_primary text-black_primary py-2 px-4
+
+    &:hover:not(:disabled)
+        @apply border-2 border-gray-100 text-gray-100 bg-black_primary py-2 px-4
+        transition: 200ms ease-in-out
+        font-size: $font-sm
+
+    &:disabled
+        @apply border-2 border-gray-400 text-gray-400
+        transition: 200ms ease-in-out
+        font-size: $font-xs
+        cursor: default
+
+@mixin button-disabled-res
+    @include button-responsive
+    @apply border-2 border-gray-400 text-gray-400
+
+    &:hover
+        @apply border-gray-400 text-gray-400
+        background-color: transparent
+        font-size: $font-sm
+        cursor: default
+
+@mixin button-blue-res
+    @include button-responsive
+    @apply text-blue_primary border-2 border-blue_primary
+
+    &:hover
+        @apply border-gray-100 text-gray-100 bg-blue_primary
+        transition: 200ms ease-in-out
+
+@mixin button-white-res
+    @include button-responsive
+    @apply text-gray-100 border-2 border-gray-100 py-2 px-4
+
+    &:hover:not(:disabled)
+        @apply border-blue_primary text-blue_primary bg-gray-100
+        transition: 200ms ease-in-out
+
+    &:disabled
+        @apply border-gray-100 text-gray-100 bg-ffd_blue-400
+        transition: 200ms ease-in-out
+        font-size: $font-sm
+        cursor: default
+
+@mixin team-card
+    .team_card
+        display: flex
+        width: fit-content
+        gap: .5rem
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+        box-shadow: -6px 9px 0px 0px #C9E2FF
+        border: 1px solid #C9E2FF
+        @apply bg-gray-100 
+        &[class$="flex-h"]
+            flex-direction: row
+            justify-content: left
+            align-items: left
+        @apply bg-gray-100 
+
+@mixin textarea
+    @apply border border-black_primary py-2 px-4 bg-gray-100
+    resize: none
+    max-width: 48rem
+    
+    min-height: 10rem
+    max-width: 60rem
+    height: auto
+    // min-height: 18rem
+    
+    max-height: 20rem
+    &:focus
+        @apply border border-ffd_blue-400 bg-gray-200
+    &:active
+        @apply border border-ffd_blue-400 bg-gray-200
+        
+        
+@mixin input
+    @apply border border-black_primary py-2 px-4 bg-gray-100
+    width: fit-content
+    display: flex
+    &:focus
+        @apply border border-ffd_blue-400 bg-gray-200
+    &:active
+        @apply border border-ffd_blue-400 bg-gray-200
+@mixin form
+    display: flex
+    flex-direction: column
+    gap: .5rem
+    @apply px-4 py-2
+    

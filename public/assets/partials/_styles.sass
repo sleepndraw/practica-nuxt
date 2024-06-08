@@ -1,0 +1,108 @@
+.styles
+    
+    
+    justify-content: center
+
+
+    .colors_showcase
+        display: flex
+        justify-content: center
+        flex-direction: row
+        flex-wrap: wrap
+        gap: 2rem
+        font-weight: $bold
+        font-style: italic
+        @apply pb-8
+
+        .color_item
+            .color_tags
+                display: flex
+                flex-direction: column
+            
+
+        .color_name
+            font-size: $font_md
+            font-weight: $bold
+
+        .color_code
+            font-size: $font_md
+            font-weight: 700
+            font-style: italic
+        // .svg_container
+        .color_subtitle
+            font-style: normal
+            font-weight: $light
+
+    .secondary_colors
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+
+        .colors_box
+            
+            .box
+                @apply mb-4
+                display: flex
+                gap: 1.5rem
+                .square
+                    height: 4rem
+                    width: 4rem
+    .type_showcase
+        display: flex
+        flex-direction: row
+        // flex-wrap: wrap
+      
+        gap: 1.5rem   
+        .text_sizes        
+            width: 60%
+        .info
+            margin-left: 4rem
+        
+.section_title
+    @apply mb-10
+
+.info
+    display: flex
+    flex-direction: column
+    justify-content: end
+    width: fit-content
+    
+    h4
+        @apply pb-2
+    p
+        @apply text-gray-500
+.demo_card
+    @apply py-8 px-4 align-middle
+    max-width: 40rem
+    border: 1px solid black
+    display: flex
+    flex-direction: column
+    gap: 1.5rem
+    
+    
+    &[class$="demo_blue"]
+        @apply bg-blue_primary text-gray-100
+    &[class$="demo_dark"]
+        @apply bg-black_primary text-gray-100
+    &[class$="demo_green"]
+        @apply bg-ffd_green-400 text-black_primary
+    // h3
+    //     @apply text-black_primary
+    //     &[class$="demo_blue"]
+    //         @apply  text-gray-100
+    //     &[class$="demo_dark"]
+    //         @apply  text-gray-100
+    //     &[class$="demo_green"]
+    //         @apply  text-green_primary
+    
+.demo_cards
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    gap: 1.5rem
+    
+@media (max-width: 640px)
+    .type_showcase
+        flex-wrap: wrap
+        .info
+            margin-left: none !important
